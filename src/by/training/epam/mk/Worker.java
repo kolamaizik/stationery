@@ -1,6 +1,6 @@
 package by.training.epam.mk;
 
-public abstract class Person {
+public class Worker {
 	private String fam;
 	private String name;
 	private String dep;

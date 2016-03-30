@@ -11,5 +11,7 @@ public abstract class Stationery {
 		this.cost = cost;
 	}
 	
-	public abstract int countStationery (String... st) ;
+	public void giveStationery(Stationery... st){
+		
+	}
 }
