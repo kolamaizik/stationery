@@ -1,17 +1,10 @@
 package by.training.epam.mk;
 
-public class Worker {
-	private String fam;
+import java.util.*;
+
+public class Worker implements Comparable {
 	private String name;
-	private String dep;
-
-	public String getFam() {
-		return fam;
-	}
-
-	public void setFam(String fam) {
-		this.fam = fam;
-	}
+	private List<Stationery> arr = new ArrayList<Stationery>();
 
 	public String getName() {
 		return name;
@@ -21,11 +14,22 @@ public class Worker {
 		this.name = name;
 	}
 
-	public String getDep() {
-		return dep;
+	public void addStationery(Stationery... st) {
+		for (Stationery stationery : st) {
+			if (stationery instanceof Stationery){
+				arr.add(stationery);
+			}
+		}
 	}
 
-	public void setDep(String dep) {
-		this.dep = dep;
+	public void showStationery() {
+		for (Stationery a : arr) {
+			System.out.println(a.toString());
+		}
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		return 0;
 	}
 }

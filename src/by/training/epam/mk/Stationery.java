@@ -1,17 +1,24 @@
 package by.training.epam.mk;
 
 public abstract class Stationery {
-	private int cost;
+	private int price;
+	private String producer;
 
-	public int getCost() {
-		return cost;
+	public abstract int getPrice();
+	public abstract void setPrice(int price);
+	public abstract String getProducer();
+	public abstract void setProducer(String producer);
+
+	public void costStationery(Stationery... st) {
+		double cost;
+		for (Stationery stationery : st) {
+
+		}
 	}
 
-	public void setCost(int cost) {
-		this.cost = cost;
+	@Override
+	public String toString() {
+		return getClass().getSimpleName();
 	}
-	
-	public void giveStationery(Stationery... st){
-		
-	}
+
 }
