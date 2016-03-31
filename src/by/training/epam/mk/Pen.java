@@ -11,8 +11,7 @@ public class Pen extends WriteTools {
 		this.type = type;
 	}
 
-	@Override
-	public String toString() {
+	public String getInfo() {
 		return String.format("%s, price = %s, producer - %s, type - %s", getClass().getSimpleName(), getPrice(), getProducer(), getType());
 	}
 }

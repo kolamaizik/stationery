@@ -15,7 +15,7 @@ public class Main {
 		
 		Test t1 = new Test();
 		
-		//доступны все методы
+		//all methods
 		p1.setPrice(100);
 		p1.setProducer("pen1");
 		p1.setColor("red");
@@ -30,7 +30,7 @@ public class Main {
 		//p2.setType("Ink pen");//no access
 		Pen np2 = (Pen) p2;
 		np2.setType("Ink pen");
-		System.out.println(np2.toString());
+		System.out.println(np2.getInfo());
 
 		m1.setPrice(10);
 		m2.setPrice(20);
@@ -40,9 +40,9 @@ public class Main {
 		m1.draw("M1 can draw");
 		//m2.draw("M1 can draw");//no access
 		
-		//w1.addStationery(p1, p2, m1, t1);//экземпл€р другого класса компил€тор не пропускает
+		//w1.addStationery(p1, p2, m1, t1);
 		w1.addStationery(p1, p2, m1, m2);
-		//w1.showStationery();
+		w1.showStationery();
 		System.out.println(w1.costStationery());
 		
 		try {
@@ -62,7 +62,7 @@ public class Main {
 			m1.setProducer("mark1");
 			m2.setProducer("mark2");
 			w2.addStationery(p3, m3);
-			//w2.showStationery();
+			w2.showStationery();
 			System.out.println(w2.costStationery());
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
