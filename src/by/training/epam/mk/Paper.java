@@ -1,16 +1,16 @@
 package by.training.epam.mk;
 
 public class Paper extends Stationery {
-	private int price;
+	private double price;
 	private String producer;
 
 	@Override
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
 	@Override
-	public void setPrice(int cost) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
