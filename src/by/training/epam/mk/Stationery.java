@@ -1,5 +1,7 @@
 package by.training.epam.mk;
 
+import java.util.Comparator;
+
 /**
  * 
  * @author mk
@@ -9,7 +11,7 @@ package by.training.epam.mk;
  *         </p>
  *
  */
-public abstract class Stationery implements Comparable<Stationery> {
+public abstract class Stationery implements Comparable<Stationery> /* , Comparator<Stationery>*/ {
 	private String name;
 	private double price;
 	private String producer;
@@ -45,6 +47,25 @@ public abstract class Stationery implements Comparable<Stationery> {
 		}
 	}
 
+/*
+	@Override
+	public int compareTo(Stationery obj) {
+		Stationery st = (Stationery) obj;
+
+		int result = name.compareTo(st.name);
+		if (result != 0) {
+			return result;
+		}
+
+		result = (int) price - (int) st.price;
+		if (result != 0) {
+			return (int) result / Math.abs(result);
+		}
+
+		return 0;
+	}
+*/
+
 	@Override
 	public int compareTo(Stationery obj) {
 		Stationery st = (Stationery) obj;
@@ -55,4 +76,19 @@ public abstract class Stationery implements Comparable<Stationery> {
 		}
 		return 0;
 	}
+/*
+	public static Comparator<Stationery> stName = new Comparator<Stationery>() {
+
+		public int compare(Stationery s1, Stationery s2) {
+			String st1 = s1.getName().toUpperCase();
+			String st2 = s2.getName().toUpperCase();
+
+			// ascending order
+			return st1.compareTo(st2);
+
+			// descending order
+			//return st2.compareTo(st1);
+		}
+	};
+*/
 }

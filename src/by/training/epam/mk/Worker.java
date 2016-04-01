@@ -2,7 +2,7 @@ package by.training.epam.mk;
 
 import java.util.*;
 
-public class Worker implements Comparable<Stationery>, Cloneable {
+public class Worker implements Cloneable {
 
 	public Worker() {
 	}
@@ -58,19 +58,5 @@ public class Worker implements Comparable<Stationery>, Cloneable {
 	public Worker clone() throws CloneNotSupportedException {
 		Worker obj = (Worker) super.clone();
 		return obj;
-	}
-	
-	@Override
-	public int compareTo(Stationery obj) {
-		Stationery st = (Stationery) obj;
-		System.out.println(st.toString() + "; " + obj.toString());
-		return 1;
-//		Stationery st = (Stationery) obj;
-//		if (obj.getPrice() < st.getPrice()) {
-//			return -1;
-//		} else if (this.id > st.id) {
-//			return 1;
-//		}
-//		return 0;
 	}
 }
