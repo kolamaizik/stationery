@@ -1,6 +1,6 @@
 package by.training.epam.mk;
 
-public class Pen extends WritingTools {
+public class Pen extends WritingObjects {
 	private String type;
 
 	@Override

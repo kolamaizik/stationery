@@ -1,6 +1,6 @@
 package by.training.epam.mk;
 
-public class Paper extends Stationery {
+public class Paper extends OfficeObjects {
 	private double price;
 	private String producer;
 

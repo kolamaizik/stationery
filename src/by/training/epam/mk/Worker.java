@@ -13,9 +13,9 @@ public class Worker implements Cloneable {
 
 	private int id;
 	private String name;
-	private List<Stationery> arr = new ArrayList<Stationery>();
+	private List<OfficeObjects> arr = new ArrayList<OfficeObjects>();
 
-	public List<Stationery> getArr() {
+	public List<OfficeObjects> getArr() {
 		return arr;
 	}
 
@@ -35,22 +35,22 @@ public class Worker implements Cloneable {
 		this.name = name;
 	}
 
-	public void addStationery(Stationery... st) {
-		for (Stationery stationery : st) {
+	public void addStationery(OfficeObjects... st) {
+		for (OfficeObjects stationery : st) {
 			arr.add(stationery);
 		}
 	}
 
 	public void showStationery() {
-		for (Stationery a : arr) {
+		for (OfficeObjects a : arr) {
 			System.out.println(a.toString());
 		}
 	}
 
 	public double costStationery() {
 		double cost = 0;
-		for (Stationery stationery : arr) {
-			cost = cost + stationery.getPrice();
+		for (OfficeObjects stationery : arr) {
+			cost += stationery.getPrice();
 		}
 		return cost;
 	}

@@ -1,6 +1,6 @@
 package by.training.epam.mk;
 
-public class Marker extends WritingTools {
+public class Marker extends WritingObjects {
 	private String type;
 
 	@Override

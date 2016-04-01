@@ -1,4 +1,4 @@
 package by.training.epam.mk;
 
-public class Calendar extends Stationery {
+public class Calendar extends OfficeObjects {
 }

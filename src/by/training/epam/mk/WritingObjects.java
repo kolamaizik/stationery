@@ -1,6 +1,6 @@
 package by.training.epam.mk;
 
-public abstract class WritingTools extends Stationery {
+public abstract class WritingObjects extends OfficeObjects {
 	private String color;
 
 	public abstract String getType();
