@@ -2,7 +2,7 @@ package by.training.epam.mk;
 
 import java.util.*;
 
-public class Worker implements Comparable, Cloneable {
+public class Worker implements Comparable<Stationery>, Cloneable {
 
 	public Worker() {
 	}
@@ -14,6 +14,10 @@ public class Worker implements Comparable, Cloneable {
 	private int id;
 	private String name;
 	private List<Stationery> arr = new ArrayList<Stationery>();
+
+	public List<Stationery> getArr() {
+		return arr;
+	}
 
 	public int getId() {
 		return id;
@@ -33,15 +37,13 @@ public class Worker implements Comparable, Cloneable {
 
 	public void addStationery(Stationery... st) {
 		for (Stationery stationery : st) {
-			//if (stationery instanceof Stationery) {
-				arr.add(stationery);
-			//}
+			arr.add(stationery);
 		}
 	}
 
 	public void showStationery() {
 		for (Stationery a : arr) {
-			System.out.println(String.format("Object - %s, price=%s, producer - %s", a.toString(), a.getPrice(), a.getProducer()));
+			System.out.println(a.toString());
 		}
 	}
 
@@ -53,13 +55,22 @@ public class Worker implements Comparable, Cloneable {
 		return cost;
 	}
 
-	@Override
-	public int compareTo(Object o) {
-		return 0;
+	public Worker clone() throws CloneNotSupportedException {
+		Worker obj = (Worker) super.clone();
+		return obj;
 	}
-
-	public Worker clone() throws CloneNotSupportedException{
-		Worker obj=(Worker)super.clone();
-        return obj;
-    }
+	
+	@Override
+	public int compareTo(Stationery obj) {
+		Stationery st = (Stationery) obj;
+		System.out.println(st.toString() + "; " + obj.toString());
+		return 1;
+//		Stationery st = (Stationery) obj;
+//		if (obj.getPrice() < st.getPrice()) {
+//			return -1;
+//		} else if (this.id > st.id) {
+//			return 1;
+//		}
+//		return 0;
+	}
 }

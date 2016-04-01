@@ -23,4 +23,9 @@ public class Paper extends Stationery {
 	public void setProducer(String producer) {
 		this.producer=producer;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("%s, price = %s, producer - %s, type - %s", getName(), getPrice(), getProducer());
+	}
 }
